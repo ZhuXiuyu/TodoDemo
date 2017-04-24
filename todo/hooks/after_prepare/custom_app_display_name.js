@@ -1,6 +1,7 @@
 /**
  * Created by Clypso on 2017/4/24.
  */
+//这个文件基本上不是很懂
 var fs = require('fs');
 var path = require('path');
 var xml2js = require('xml2js'),
@@ -34,6 +35,7 @@ if (rootdir) {
 
           if(platform == 'android') {
             replace_string_in_file('platforms/android/res/values/strings.xml', configMap.name, configMap.display);
+            //此处看不明白 （from zxy）
           } else if(platform == 'ios') {
             replace_string_in_file('platforms/ios/' + configMap.name + '/' + configMap.name + '-Info.plist', '${PRODUCT_NAME}', configMap.display);
           }
